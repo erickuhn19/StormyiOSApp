@@ -13,6 +13,10 @@
 		FEC4FEA31BAF1DBC00E89EC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC4FEA21BAF1DBC00E89EC3 /* Images.xcassets */; };
 		FEC4FEA61BAF1DBC00E89EC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC4FEA41BAF1DBC00E89EC3 /* LaunchScreen.xib */; };
 		FEC4FEB21BAF1DBC00E89EC3 /* StormyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4FEB11BAF1DBC00E89EC3 /* StormyTests.swift */; };
+		FEC4FEBE1BAF224700E89EC3 /* CurrentWeather.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEC4FEBD1BAF224700E89EC3 /* CurrentWeather.plist */; };
+		FEC4FEC01BAF345300E89EC3 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4FEBF1BAF345300E89EC3 /* CurrentWeather.swift */; };
+		FEC4FEC31BAF9EB700E89EC3 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4FEC21BAF9EB700E89EC3 /* NetworkOperation.swift */; };
+		FEC4FEC51BB2003F00E89EC3 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4FEC41BB2003F00E89EC3 /* ForecastService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,11 @@
 		FEC4FEAB1BAF1DBC00E89EC3 /* StormyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StormyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC4FEB01BAF1DBC00E89EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEC4FEB11BAF1DBC00E89EC3 /* StormyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormyTests.swift; sourceTree = "<group>"; };
+		FEC4FEBD1BAF224700E89EC3 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CurrentWeather.plist; sourceTree = "<group>"; };
+		FEC4FEBF1BAF345300E89EC3 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		FEC4FEC11BAF681E00E89EC3 /* stormyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = stormyPlayground.playground; sourceTree = "<group>"; };
+		FEC4FEC21BAF9EB700E89EC3 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		FEC4FEC41BB2003F00E89EC3 /* ForecastService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +88,14 @@
 			children = (
 				FEC4FE9B1BAF1DBC00E89EC3 /* AppDelegate.swift */,
 				FEC4FE9D1BAF1DBC00E89EC3 /* ViewController.swift */,
+				FEC4FEBF1BAF345300E89EC3 /* CurrentWeather.swift */,
+				FEC4FEC21BAF9EB700E89EC3 /* NetworkOperation.swift */,
+				FEC4FEC41BB2003F00E89EC3 /* ForecastService.swift */,
 				FEC4FE9F1BAF1DBC00E89EC3 /* Main.storyboard */,
 				FEC4FEA21BAF1DBC00E89EC3 /* Images.xcassets */,
 				FEC4FEA41BAF1DBC00E89EC3 /* LaunchScreen.xib */,
 				FEC4FE991BAF1DBB00E89EC3 /* Supporting Files */,
+				FEC4FEC11BAF681E00E89EC3 /* stormyPlayground.playground */,
 			);
 			path = Stormy;
 			sourceTree = "<group>";
@@ -90,6 +103,7 @@
 		FEC4FE991BAF1DBB00E89EC3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEC4FEBD1BAF224700E89EC3 /* CurrentWeather.plist */,
 				FEC4FE9A1BAF1DBC00E89EC3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -193,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEC4FEA11BAF1DBC00E89EC3 /* Main.storyboard in Resources */,
+				FEC4FEBE1BAF224700E89EC3 /* CurrentWeather.plist in Resources */,
 				FEC4FEA61BAF1DBC00E89EC3 /* LaunchScreen.xib in Resources */,
 				FEC4FEA31BAF1DBC00E89EC3 /* Images.xcassets in Resources */,
 			);
@@ -212,7 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC4FEC31BAF9EB700E89EC3 /* NetworkOperation.swift in Sources */,
 				FEC4FE9E1BAF1DBC00E89EC3 /* ViewController.swift in Sources */,
+				FEC4FEC01BAF345300E89EC3 /* CurrentWeather.swift in Sources */,
+				FEC4FEC51BB2003F00E89EC3 /* ForecastService.swift in Sources */,
 				FEC4FE9C1BAF1DBC00E89EC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
