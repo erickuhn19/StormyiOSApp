@@ -32,13 +32,13 @@ class NetworkOperation {
                 switch(httpResponse.statusCode) {
                 case 200:
                     // 2. Create JSON object with data
-                    let jsonDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [String: AnyObject]
+                    let jsonDictionary = (try? NSJSONSerialization.JSONObjectWithData(data!, options: [])) as? [String: AnyObject]
                     completion(jsonDictionary)
                 default:
-                    println("GET request not successful. HTTP status code: \(httpResponse.statusCode)")
+                    print("GET request not successful. HTTP status code: \(httpResponse.statusCode)")
                 }
             } else {
-                println("Error: not a valid HTTP response")
+                print("Error: not a valid HTTP response")
             }
             
             

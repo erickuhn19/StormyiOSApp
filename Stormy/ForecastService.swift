@@ -31,7 +31,7 @@ struct ForecastService {
             }
             
         } else {
-            println("could not construct a valid URL")
+            print("could not construct a valid URL")
         }
     }
     
@@ -40,7 +40,7 @@ struct ForecastService {
         if let currentWeatherDictionary = jsonDictionary?["currently"] as? [String: AnyObject] {
             return CurrentWeather(weatherDictionary: currentWeatherDictionary)
         } else {
-            println("JSON dictionary returned nil for currently key")
+            print("JSON dictionary returned nil for currently key")
             return nil
         }
         
