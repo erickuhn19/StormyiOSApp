@@ -20,14 +20,14 @@ struct ForecastService {
     }
     
     
-    func getForecast(lat: Double, long: Double, completion: (CurrentWeather? -> Void)) {
+    func getForecast(lat: Double, long: Double, completion: (Forecast? -> Void)) {
         if let forecastURL = NSURL(string: "\(lat),\(long)", relativeToURL: forecastBaseURL) {
             let networkOperation = NetworkOperation(url: forecastURL)
             
             networkOperation.downloadJSONFromURL {
                 (let JSONDictionary) in
-                let currentWeather = self.currentWeatherFromJSONDictionary(JSONDictionary)
-                completion(currentWeather)
+                let forecast = Forecast(weatherDictionary: JSONDictionary)
+                completion(forecast)
             }
             
         } else {
@@ -35,16 +35,7 @@ struct ForecastService {
         }
     }
     
-    func currentWeatherFromJSONDictionary(jsonDictionary: [String: AnyObject]?) -> CurrentWeather? {
-        
-        if let currentWeatherDictionary = jsonDictionary?["currently"] as? [String: AnyObject] {
-            return CurrentWeather(weatherDictionary: currentWeatherDictionary)
-        } else {
-            print("JSON dictionary returned nil for currently key")
-            return nil
-        }
-        
-    }
+
     
     
     
